@@ -1,23 +1,40 @@
+.webp .hero {
+  @include tablet {
+    &::before {
+      @include bg-image("../img/image-mockups.webp");
+    }
+  }
+}
+.no-webp .hero {
+  @include tablet {
+    &::before {
+      @include bg-image("../img/image-mockups.png");
+    }
+  }
+}
 .hero {
   text-align: center;
   position: relative;
   z-index: 1;
-  background-color: $White;
   @include tablet {
     @include bg-image("../img/bg-intro-desktop.svg");
     background-position: 26rem -18rem;
-    background-size: 100% 73rem;
+    background-size: cover;
     position: relative;
     z-index: 1;
+
     &::before {
       content: "";
       position: absolute;
-      @include bg-image("../img/image-mockups-3.png");
       width: 40rem;
       height: 60rem;
       top: -11%;
       right: 0;
       z-index: 100;
+      @include desktop {
+        width: 61.5rem;
+        height: 90rem;
+      }
     }
   }
   .wrapper {
@@ -33,11 +50,12 @@
     margin-top: -11.6rem;
   }
   &-content {
+    height: 100vh;
     @include tablet {
       display: flex;
       flex-direction: row-reverse;
-      // position: relative;
       overflow-x: hidden;
+      height: auto;
     }
   }
   &-image {
@@ -63,20 +81,40 @@
   h1 {
     margin-top: 4.4rem;
     font-weight: $regular;
-    color: $Dark-Blue;
   }
   p {
     margin: 2.5rem 0;
   }
-}
-.hero-image {
-  @include bg-image("../img/image-mockups-3.png");
-  background-position: center bottom;
   @include tablet {
-    // background-position: center right;
+    background-position: 44rem -22rem;
+  }
+  @include desktop {
+    height: 65.5rem;
+
+    background-position: 66rem -33rem;
+  }
+  .btn-request {
+    @include tablet {
+      width: 20rem;
+    }
+  }
+}
+.webp .hero-image {
+  @include bg-image("../img/image-mockups.webp");
+}
+.no-webp .hero-image {
+  @include bg-image("../img/image-mockups.webp");
+}
+.webp .hero-image,
+.no-webp .hero-image {
+  @include tablet {
     background: none;
   }
-  // border: 1px solid red;
+}
+.hero-image {
+  // @include bg-image("../img/image-mockups.png");
+  background-position: center bottom;
+
   &::before {
     content: "";
     position: absolute;

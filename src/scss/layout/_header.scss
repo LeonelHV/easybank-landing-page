@@ -90,14 +90,11 @@
       );
     }
   }
-  a {
-    color: $Dark-Blue;
-  }
+
   &.active li {
     padding: 1rem 0;
   }
 }
-
 .main.active {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2d2f3d+0,cddaf4+11 */
   background: rgb(45, 47, 61); /* Old browsers */
@@ -117,4 +114,5 @@
     rgba(205, 218, 244, 1) 11%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d2f3d', endColorstr='#cddaf4',GradientType=0 ); /* IE6-9 */
+  overflow-y: hidden;
 }

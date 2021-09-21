@@ -1,5 +1,5 @@
 .articles {
-  background-color: $Very-Light-Gray;
+  background-color: $White;
   padding: 9rem 0;
   h4 {
     font-size: 1.3rem;
@@ -23,12 +23,16 @@
   @include tablet {
     @include grid(2, 3rem);
   }
+  @include desktop {
+    @include grid(4, 3.5rem);
+  }
 }
 .card {
   border-radius: 0.5rem;
   background-color: $White;
   margin-bottom: $separacion/2;
   overflow: hidden;
+  box-shadow: -1px 6px 5px 7px rgba(0, 0, 0, 0.04);
 
   .card-text {
     padding: 3rem;
@@ -48,6 +52,12 @@
   p {
     font-size: 1.4rem;
     margin-bottom: 4.5rem;
-    color: $Grayish-Blue;
   }
+}
+.card-text h3:hover,
+.icons-social a:hover,
+.links-contact a:hover,
+.links-support a:hover {
+  color: $Lim-Green;
+  cursor: pointer;
 }

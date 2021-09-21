@@ -3,16 +3,27 @@
   text-align: center;
   @include tablet {
     text-align: left;
+  }
+  @include desktop {
     padding: 11rem 0;
   }
   h2 {
-    padding-top: 7rem;
+    padding-top: 6rem;
     @include tablet {
       text-align: left;
+      padding-top: 3rem;
+    }
+    @include desktop {
+      padding-top: 0;
     }
   }
   p {
     margin: 2.5rem 0;
+  }
+  .easybank-text {
+    @include tablet {
+      width: 57rem;
+    }
   }
 }
 .container-features {
@@ -20,6 +31,9 @@
   @include tablet {
     display: grid;
     @include grid(2, 2rem);
+  }
+  @include desktop {
+    @include grid(4, 3.3rem);
   }
 }
 .feature {
@@ -32,6 +46,9 @@
   @include tablet {
     margin-top: 0;
   }
+  @include desktop {
+    align-items: flex-start;
+  }
   &:first-of-type {
     margin-top: 0rem;
   }
@@ -42,6 +59,9 @@
     margin-top: 0;
     @include tablet {
       text-align: center;
+    }
+    @include desktop {
+      text-align: left;
     }
   }
   h3 {
