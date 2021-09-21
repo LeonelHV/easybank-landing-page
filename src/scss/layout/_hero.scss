@@ -1,0 +1,125 @@
+.hero {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  background-color: $White;
+  @include tablet {
+    @include bg-image("../img/bg-intro-desktop.svg");
+    background-position: 26rem -18rem;
+    background-size: 100% 73rem;
+    position: relative;
+    z-index: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      @include bg-image("../img/image-mockups-3.png");
+      width: 40rem;
+      height: 60rem;
+      top: -11%;
+      right: 0;
+      z-index: 100;
+    }
+  }
+  .wrapper {
+    position: relative;
+  }
+  &-image {
+    height: 28.1rem;
+    @include tablet {
+      height: 50rem;
+    }
+  }
+  .image-mockups {
+    margin-top: -11.6rem;
+  }
+  &-content {
+    @include tablet {
+      display: flex;
+      flex-direction: row-reverse;
+      // position: relative;
+      overflow-x: hidden;
+    }
+  }
+  &-image {
+    @include tablet {
+      flex: 2;
+    }
+  }
+  &-description {
+    text-align: center;
+    .btn-request {
+      margin-bottom: 9rem;
+    }
+    @include tablet {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 1000;
+      text-align: left;
+    }
+  }
+  h1 {
+    margin-top: 4.4rem;
+    font-weight: $regular;
+    color: $Dark-Blue;
+  }
+  p {
+    margin: 2.5rem 0;
+  }
+}
+.hero-image {
+  @include bg-image("../img/image-mockups-3.png");
+  background-position: center bottom;
+  @include tablet {
+    // background-position: center right;
+    background: none;
+  }
+  // border: 1px solid red;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    @include bg-image("../img/bg-intro-mobile.svg");
+    background-position: center center;
+    width: 100%;
+    height: inherit;
+    top: 0;
+    left: 0;
+    @include tablet {
+      background: none;
+    }
+  }
+
+  .hero-description {
+    margin-top: $separacion;
+  }
+}
+.btn-request {
+  border: none;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7bd192+58,75c0d5+100&1+0,0.97+100 */
+  background: -moz-linear-gradient(
+    left,
+    rgba(123, 209, 146, 1) 0%,
+    rgba(123, 209, 146, 0.98) 58%,
+    rgba(117, 192, 213, 0.97) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    left,
+    rgba(123, 209, 146, 1) 0%,
+    rgba(123, 209, 146, 0.98) 58%,
+    rgba(117, 192, 213, 0.97) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to right,
+    rgba(123, 209, 146, 1) 0%,
+    rgba(123, 209, 146, 0.98) 58%,
+    rgba(117, 192, 213, 0.97) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7bd192', endColorstr='#f775c0d5',GradientType=1 ); /* IE6-9 */
+  color: $White;
+  font-weight: 700;
+  padding: 1rem 3rem;
+  border-radius: 4rem;
+}

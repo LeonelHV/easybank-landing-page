@@ -1,0 +1,120 @@
+.header {
+  position: relative;
+  z-index: 100;
+  background-color: $White;
+}
+.nav-principal {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.2rem 0;
+  .nav-links,
+  .btn-request {
+    display: none;
+  }
+  @include tablet {
+    .nav-links {
+      display: flex;
+    }
+    .nav-links li {
+      margin-right: 3rem;
+    }
+    .nav-links li:last-of-type {
+      margin-right: 0;
+    }
+  }
+  @include desktop {
+    .btn-request {
+      display: block;
+    }
+  }
+}
+.logo {
+  width: 13.9rem;
+  height: 2rem;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.hamburger {
+  &:hover {
+    cursor: pointer;
+  }
+  .close {
+    display: none;
+  }
+
+  &.show .open {
+    display: none;
+  }
+  &.show .close {
+    display: block;
+  }
+  @include tablet {
+    display: none;
+  }
+}
+.nav-links {
+  &.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: -18rem;
+    left: 0;
+    width: 100%;
+    background-color: $Light-Grayish-Blue;
+    margin: -$separacion/1.5 auto;
+    border-radius: 0.5rem;
+  }
+  @include tablet {
+    li {
+      height: 100%;
+    }
+    a {
+      position: relative;
+    }
+    a:hover:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 0.5rem;
+      position: absolute;
+      margin-top: 2.5rem;
+      background: linear-gradient(
+        to right,
+        rgba(123, 209, 146, 1) 0%,
+        rgba(123, 209, 146, 0.98) 58%,
+        rgba(117, 192, 213, 0.97) 100%
+      );
+    }
+  }
+  a {
+    color: $Dark-Blue;
+  }
+  &.active li {
+    padding: 1rem 0;
+  }
+}
+
+.main.active {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2d2f3d+0,cddaf4+11 */
+  background: rgb(45, 47, 61); /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    rgba(45, 47, 61, 1) 0%,
+    rgba(205, 218, 244, 1) 11%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(45, 47, 61, 1) 0%,
+    rgba(205, 218, 244, 1) 11%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba(45, 47, 61, 1) 0%,
+    rgba(205, 218, 244, 1) 11%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d2f3d', endColorstr='#cddaf4',GradientType=0 ); /* IE6-9 */
+}

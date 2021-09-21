@@ -1,0 +1,53 @@
+.articles {
+  background-color: $Very-Light-Gray;
+  padding: 9rem 0;
+  h4 {
+    font-size: 1.3rem;
+    font-weight: $delgada;
+  }
+  h3 {
+    font-size: 2rem;
+    font-weight: $regular;
+  }
+  h2 {
+    margin-bottom: 3.8rem;
+    @include tablet {
+      text-align: left;
+    }
+  }
+  img {
+    height: 20rem;
+  }
+}
+.cards {
+  @include tablet {
+    @include grid(2, 3rem);
+  }
+}
+.card {
+  border-radius: 0.5rem;
+  background-color: $White;
+  margin-bottom: $separacion/2;
+  overflow: hidden;
+
+  .card-text {
+    padding: 3rem;
+  }
+  h4,
+  h3,
+  p {
+    text-align: left;
+  }
+  h3 {
+    margin: 1.6rem 0;
+    font-size: 1.6rem;
+  }
+  h4 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 1.4rem;
+    margin-bottom: 4.5rem;
+    color: $Grayish-Blue;
+  }
+}

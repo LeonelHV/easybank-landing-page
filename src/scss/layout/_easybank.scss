@@ -1,0 +1,50 @@
+.easybank {
+  background-color: $Very-Light-Gray;
+  text-align: center;
+  @include tablet {
+    text-align: left;
+    padding: 11rem 0;
+  }
+  h2 {
+    padding-top: 7rem;
+    @include tablet {
+      text-align: left;
+    }
+  }
+  p {
+    margin: 2.5rem 0;
+  }
+}
+.container-features {
+  padding: $separacion + 2 0;
+  @include tablet {
+    display: grid;
+    @include grid(2, 2rem);
+  }
+}
+.feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 3rem;
+  @include tablet {
+    margin-top: 0;
+  }
+  &:first-of-type {
+    margin-top: 0rem;
+  }
+  img {
+    width: 10rem;
+  }
+  p {
+    margin-top: 0;
+    @include tablet {
+      text-align: center;
+    }
+  }
+  h3 {
+    margin: 2rem 0;
+  }
+}
